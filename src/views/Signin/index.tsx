@@ -13,7 +13,7 @@ class Signin extends Component {
       <View>
         <Text>Sign in view</Text>
       </View>
-    )
+    );
   }
 }
 

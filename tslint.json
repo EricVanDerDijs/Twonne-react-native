@@ -32,6 +32,8 @@
         ],
         "alphabetize": false
       }
-    ]
+    ],
+    // prevent Interface prefixin
+    "interface-name": [true, "never-prefix"]
   }
 }
