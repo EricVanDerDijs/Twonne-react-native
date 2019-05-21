@@ -1,32 +1,13 @@
-const ACTIONS: { [s: string]: string } = {
-  SESSION_COLORS_ADD: 'SESSION_COLORS_ADD',
-  SESSION_TOKEN_ADD: 'SESSION_TOKEN_ADD',
-  SESSION_TOKEN_REMOVE: 'SESSION_TOKEN_REMOVE',
-  SESSION_UPDATE: 'SESSION_UPDATE',
-  SESSION_USER_ADD: 'SESSION_USER_ADD',
-  SESSION_USER_EMAIL_SET: 'SESSION_USER_EMAIL_SET',
-  SESSION_WORKSPACE_ADD: 'SESSION_WORKSPACE_ADD',
-};
+import { SessionState } from './types';
 
-interface InitialState {
-  colors: string[];
-  email: string;
-  role: string;
-  token: string;
-  username: string;
-  workspace: string;
-}
-
-const initialState: InitialState = {
-  colors: [],
+const initialState: SessionState = {
   email: '',
   role: '',
   token: '',
   username: '',
-  workspace: '',
 };
 
-export default function(state = initialState, action){
+export default function (state = initialState, action): SessionState{
   switch (action.type) {
 
     case ACTIONS.SESSION_TOKEN_ADD:
