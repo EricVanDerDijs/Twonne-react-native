@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
+import { Signin } from './views/Signin';
 import {
   createAppContainer,
   createStackNavigator,
   createSwitchNavigator,
 } from 'react-navigation';
-import { Provider } from 'react-redux';
-import { store } from './config/redux';
-import { Signin } from './views/Signin';
 
 const AuthStack = createStackNavigator({
   Signin,

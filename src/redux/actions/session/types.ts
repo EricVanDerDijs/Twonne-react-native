@@ -6,46 +6,48 @@ import {
   SESSION_USER_EMAIL_SET,
 } from './index';
 
-interface UserData {
+export interface IUserData {
   username: string;
   email: string;
   role: string;
 }
 
-interface PartialSessionObject {
+export interface IPartialSessionObject {
   email?: string;
   role?: string;
   token?: string;
   username?: string;
 }
 
-interface AddTokenAction {
+interface IAddTokenAction {
   type: typeof SESSION_TOKEN_ADD;
   payload: {
     token: string,
   };
 }
 
-interface RemoveTokenAction {
-  type: typeof SESSION_TOKEN_REMOVE
+interface IRemoveTokenAction {
+  type: typeof SESSION_TOKEN_REMOVE;
 }
 
-interface UpdateSessionData {
+interface IUpdateSessionData {
   type: typeof SESSION_UPDATE;
   payload: {
-    sessionObject: PartialSessionObject,
+    sessionObject: IPartialSessionObject,
   };
 }
 
-interface AddUserData {
+interface IAddUserData {
   type: typeof SESSION_USER_ADD;
-  payload: UserData;
+  payload: {
+    userData: IUserData,
+  };
 }
 
-interface SetUserEmailAction {
+interface ISetUserEmailAction {
   type: typeof SESSION_USER_EMAIL_SET;
   payload: { email: string };
 }
 
-export type SessionActionTypes = AddTokenAction | RemoveTokenAction
-  | UpdateSessionData | AddUserData | SetUserEmailAction;
+export type SessionActionTypes = IAddTokenAction | IRemoveTokenAction
+  | IUpdateSessionData | IAddUserData | ISetUserEmailAction;

@@ -1,4 +1,12 @@
+import { SessionActionTypes } from '../../actions/session/types';
 import { SessionState } from './types';
+import {
+  SESSION_TOKEN_ADD,
+  SESSION_TOKEN_REMOVE,
+  SESSION_UPDATE,
+  SESSION_USER_ADD,
+  SESSION_USER_EMAIL_SET,
+} from '../../actions/session';
 
 const initialState: SessionState = {
   email: '',
@@ -7,56 +15,39 @@ const initialState: SessionState = {
   username: '',
 };
 
-export default function (state = initialState, action): SessionState{
+export const sessionReducer = (state = initialState, action: SessionActionTypes): SessionState => {
   switch (action.type) {
-
-    case ACTIONS.SESSION_TOKEN_ADD:
+    case SESSION_TOKEN_ADD:
       const { token } = action.payload;
       return {
         ...state,
         token,
       };
 
-    case ACTIONS.SESSION_WORKSPACE_ADD:
-      const { workspace } = action.payload;
-      return {
-        ...state,
-        workspace,
-      };
-
-    case ACTIONS.SESSION_UPDATE:
+    case SESSION_UPDATE:
       const { sessionObject } = action.payload;
       return {
         ...state,
         ...sessionObject,
       };
 
-    case ACTIONS.SESSION_TOKEN_REMOVE:
+    case SESSION_TOKEN_REMOVE:
       return {
         ...state,
         token: initialState.token,
       };
 
-    case ACTIONS.SESSION_USER_ADD:
-      const { username, email, role } = action.payload;
+    case SESSION_USER_ADD:
+      const { userData } = action.payload;
       return {
         ...state,
-        email,
-        role,
-        username,
+        ...userData,
       };
 
-    case ACTIONS.SESSION_USER_EMAIL_SET:
+    case SESSION_USER_EMAIL_SET:
       return {
         ...state,
         email: action.payload.email,
-      };
-
-    case ACTIONS.SESSION_COLORS_ADD:
-      const { colors } = action.payload;
-      return {
-        ...state,
-        colors,
       };
 
     default:

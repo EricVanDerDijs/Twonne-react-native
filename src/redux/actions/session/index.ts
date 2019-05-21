@@ -1,56 +1,42 @@
-import { SessionActionTypes } from './types';
+import {
+  IPartialSessionObject,
+  IUserData,
+  SessionActionTypes,
+} from './types';
 
 // actions declarations
-export const SESSION_COLORS_ADD = 'SESSION_COLORS_ADD';
 export const SESSION_TOKEN_ADD = 'SESSION_TOKEN_ADD';
 export const SESSION_TOKEN_REMOVE = 'SESSION_TOKEN_REMOVE';
 export const SESSION_UPDATE = 'SESSION_UPDATE';
 export const SESSION_USER_ADD = 'SESSION_USER_ADD';
 export const SESSION_USER_EMAIL_SET = 'SESSION_USER_EMAIL_SET';
-export const SESSION_WORKSPACE_ADD = 'SESSION_WORKSPACE_ADD';
 
-export const addToken: SessionActionTypes = (token: string) => ({
+export const addToken = (token: string): SessionActionTypes => ({
   type: SESSION_TOKEN_ADD,
   payload: {
-    token
-  }
-})
+    token,
+  },
+});
 
-export const removeToken = () => ({
-  type: SESSION_TOKEN_REMOVE
-})
+export const removeToken = (): SessionActionTypes => ({
+  type: SESSION_TOKEN_REMOVE,
+});
 
-export const addWorkspace = workspace => ({
-  type: SESSION_WORKSPACE_ADD,
-  payload: {
-    workspace
-  }
-})
-
-export const updateSession = sessionObject => ({
+export const updateSession = (sessionObject: IPartialSessionObject): SessionActionTypes => ({
   type: SESSION_UPDATE,
   payload: {
-    sessionObject
-  }
-})
+    sessionObject,
+  },
+});
 
-export const addUser = ({ username, email, role }) => ({
+export const addUser = (userData: IUserData): SessionActionTypes => ({
   type: SESSION_USER_ADD,
   payload: {
-    username,
-    email,
-    role
-  }
-})
+    userData,
+  },
+});
 
-export const setUserEmail = (email) => ({
+export const setUserEmail = (email: string): SessionActionTypes => ({
   type: SESSION_USER_EMAIL_SET,
-  payload: { email }
-})
-
-export const addColors = (colors) => ({
-  type: SESSION_COLORS_ADD,
-  payload: {
-    colors
-  }
-})
+  payload: { email },
+});

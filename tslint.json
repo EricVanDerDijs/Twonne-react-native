@@ -33,7 +33,7 @@
         "alphabetize": false
       }
     ],
-    // prevent Interface prefixin
-    "interface-name": [true, "never-prefix"]
+    "object-literal-sort-keys": [ true, "match-declaration-order-only" ],
+    "ordered-imports": false,
   }
 }
