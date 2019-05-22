@@ -6,10 +6,7 @@
   ],
   "jsRules": {},
   "rules": {
-    // use single quotemarks
     "quotemark": [true, "single"],
-    // this ordering allows me to place public react lifecycle
-    // methods at the end of class componets declarations
     "member-ordering": [
       true,
       {
@@ -34,6 +31,6 @@
       }
     ],
     "object-literal-sort-keys": [ true, "match-declaration-order-only" ],
-    "ordered-imports": false,
+    "ordered-imports": false
   }
 }
