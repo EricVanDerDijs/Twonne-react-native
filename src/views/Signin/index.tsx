@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { SigninLayout } from './components/SigninLayout';
 
 class Signin extends Component {
-  private signin = () => {
+  public static navigationOptions = {
+    header: null,
+  };
+
+  private handleSignin = () => {
     // tslint:disable-next-line
     console.log('sign in!');
   }
 
   public render() {
-    this.signin();
     return (
-      <View>
-        <Text>Sign in view</Text>
-      </View>
+      <SigninLayout
+        username='eric'
+        handleSignin={this.handleSignin}
+      />
     );
   }
 }

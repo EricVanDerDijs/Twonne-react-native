@@ -1,21 +1,36 @@
 import React from 'react';
-import { ReactElement, EventHandler, SyntheticEvent } from 'react';
-import { Button as NativeButton } from 'react-native';
+import { ReactElement } from 'react';
+import { TouchableHighlight, View, Text } from 'react-native';
+import { NativeSyntheticEvent, NativeTouchEvent } from 'react-native';
+import { styles } from './styles';
 
 interface IProps {
-  title: string;
-  onPress: EventHandler<SyntheticEvent>;
+  color?: string;
+  textColor?: string;
+  text: string;
+  onPress(e: NativeSyntheticEvent<NativeTouchEvent>): void;
 }
 
 const Button = ({
-  title,
+  text,
   onPress,
+  color,
+  textColor,
 }: IProps): ReactElement => {
+  const style = styles(color, textColor);
   return (
-    <NativeButton
-      title={title}
+    <TouchableHighlight
       onPress={onPress}
-    />
+      style={style.container}
+    >
+      <View>
+        <Text
+          style={style.text}
+        >
+          {text}
+        </Text>
+      </View>
+    </TouchableHighlight>
   );
 };
 

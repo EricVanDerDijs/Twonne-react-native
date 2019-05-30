@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from './index';
+import { TwonneIcon } from './index';
 import renderer from 'react-test-renderer';
 
 function mockHandler(): void {
@@ -7,10 +7,10 @@ function mockHandler(): void {
   console.debug('test text')
 }
 
-it('Renders NativeButton with our custom styles', () => {
+it('Renders Twonne Logo', () => {
   const tree = renderer.create((
-    <Button
-      text='exppected text'
+    <TwonneIcon
+      fontSize={14}
       onPress={mockHandler}
     />
   )).toJSON();
