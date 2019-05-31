@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Renders NativeButton with our custom styles 1`] = `
+exports[`Renders Twonne Logo 1`] = `
 <View
   accessible={true}
   isTVSelectable={true}
@@ -12,9 +12,8 @@ exports[`Renders NativeButton with our custom styles 1`] = `
   onStartShouldSetResponder={[Function]}
   style={
     Object {
-      "backgroundColor": "#F37721",
-      "borderRadius": 10,
-      "height": 50,
+      "backgroundColor": "white",
+      "borderRadius": 30,
     }
   }
 >
@@ -24,11 +23,13 @@ exports[`Renders NativeButton with our custom styles 1`] = `
     <Text
       style={
         Object {
-          "color": "white",
+          "color": "#F37721",
+          "fontFamily": "ExpletusSans-BoldItalic",
+          "fontSize": 14,
         }
       }
     >
-      exppected text
+      Twonne
     </Text>
   </View>
 </View>
