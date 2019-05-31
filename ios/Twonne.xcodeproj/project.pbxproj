@@ -42,6 +42,7 @@
 		227488B06B7248A3B768D5E9 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E19DA93FDAA94B2BB98B0CE0 /* libRNGestureHandler.a */; };
 		08B6DB11B9144C0C8631F902 /* libRNGestureHandler-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55DB689246EC4665944816F4 /* libRNGestureHandler-tvOS.a */; };
 		4A8FBD29C37045529B04FC75 /* ExpletusSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9809B27AB1224688A5672CAD /* ExpletusSans-SemiBoldItalic.ttf */; };
+		9694D04FC42E4A2DAD5700A8 /* ExpletusSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAB9F389EB2B4DD7902819FF /* ExpletusSans-BoldItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -353,6 +354,7 @@
 		E19DA93FDAA94B2BB98B0CE0 /* libRNGestureHandler.a */ = {isa = PBXFileReference; name = "libRNGestureHandler.a"; path = "libRNGestureHandler.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		55DB689246EC4665944816F4 /* libRNGestureHandler-tvOS.a */ = {isa = PBXFileReference; name = "libRNGestureHandler-tvOS.a"; path = "libRNGestureHandler-tvOS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		9809B27AB1224688A5672CAD /* ExpletusSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; name = "ExpletusSans-SemiBoldItalic.ttf"; path = "../src/assets/fonts/ExpletusSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AAB9F389EB2B4DD7902819FF /* ExpletusSans-BoldItalic.ttf */ = {isa = PBXFileReference; name = "ExpletusSans-BoldItalic.ttf"; path = "../src/assets/fonts/ExpletusSans-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -625,6 +627,7 @@
 			isa = "PBXGroup";
 			children = (
 				9809B27AB1224688A5672CAD /* ExpletusSans-SemiBoldItalic.ttf */,
+				AAB9F389EB2B4DD7902819FF /* ExpletusSans-BoldItalic.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1077,6 +1080,7 @@
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				4A8FBD29C37045529B04FC75 /* ExpletusSans-SemiBoldItalic.ttf in Resources */,
+				9694D04FC42E4A2DAD5700A8 /* ExpletusSans-BoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,7 @@ export const styles = (
   },
   text: {
     color: yellowTwonne,
-    fontFamily: 'ExpletusSans-SemiBoldItalic',
+    fontFamily: 'ExpletusSans-BoldItalic',
     fontSize,
   },
 });
