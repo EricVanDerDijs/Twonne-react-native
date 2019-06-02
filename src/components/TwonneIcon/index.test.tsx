@@ -1,6 +1,8 @@
 import React from 'react';
 import { TwonneIcon } from './index';
-import renderer from 'react-test-renderer';
+import shallowRenderer from 'react-test-renderer/shallow';
+
+const shallow = shallowRenderer.createRenderer();
 
 function mockHandler(): void {
   // tslint:disable-next-line
@@ -8,11 +10,10 @@ function mockHandler(): void {
 }
 
 it('Renders Twonne Logo', () => {
-  const tree = renderer.create((
+  shallow.render((
     <TwonneIcon
       fontSize={14}
       onPress={mockHandler}
     />
-  )).toJSON();
-  expect(tree).toMatchSnapshot();
+  ));
 });

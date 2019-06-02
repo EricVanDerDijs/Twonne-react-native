@@ -1,18 +1,19 @@
 import React from 'react';
 import { Button } from './index';
-import renderer from 'react-test-renderer';
+import shallowRenderer from 'react-test-renderer/shallow';
+
+const shallow = shallowRenderer.createRenderer();
 
 function mockHandler(): void {
   // tslint:disable-next-line
   console.debug('test text')
 }
 
-it('Renders NativeButton with our custom styles', () => {
-  const tree = renderer.create((
+it('Renders Button', () => {
+  shallow.render((
     <Button
       text='exppected text'
       onPress={mockHandler}
     />
-  )).toJSON();
-  expect(tree).toMatchSnapshot();
+  ));
 });
