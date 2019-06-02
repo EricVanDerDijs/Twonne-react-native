@@ -3,7 +3,14 @@ import { Text, View } from 'react-native';
 import { NativeSyntheticEvent, NativeTouchEvent } from 'react-native';
 import { TwonneIcon } from '../../../../components/TwonneIcon';
 import { Button } from '../../../../components/Button';
+import { TextInput } from '../../../../components/TextInput';
+import { white } from '../../../../assets/colors';
 import { styles } from './styles';
+
+const mockHandler = (text: string): void => {
+  // tslint:disable-next-line
+  console.debug(text);
+};
 
 interface IProps {
   username: string;
@@ -20,7 +27,12 @@ export const SigninLayout = ({
         <TwonneIcon fontSize={40} />
       </View>
       <View style={styles.formContainer}>
-        <Text>{username}</Text>
+        <TextInput
+          label='username'
+          value={username}
+          labelColor={white}
+          onChangeText={mockHandler}
+        />
         <Button
           text='Signin'
           onPress={handleSignin}

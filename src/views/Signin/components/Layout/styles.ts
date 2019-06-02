@@ -8,10 +8,13 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   twonneIconContainer: {
-    flex: 6,
+    flex: 4,
     justifyContent: 'center',
   },
   formContainer: {
-    flex: 4,
+    flex: 6,
+    width: '100%',
+    padding: 15,
+    justifyContent: 'space-between',
   },
 });
