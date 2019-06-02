@@ -3,7 +3,7 @@ import { ReactElement } from 'react';
 import { TouchableHighlight, View, Text } from 'react-native';
 import { NativeSyntheticEvent, NativeTouchEvent } from 'react-native';
 import { styles } from './styles';
-import { shadowGray } from '../../assets/strings/colors';
+import { shadowGray } from '../../assets/colors';
 
 interface IProps {
   fontSize: number;

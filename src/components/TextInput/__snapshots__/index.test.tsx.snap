@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders our custom TesxtInput 1`] = `
+<TextInput
+  allowFontScaling={true}
+  onChangeText={[Function]}
+  rejectResponderTermination={true}
+  style={
+    Object {
+      "backgroundColor": "white",
+      "borderRadius": 30,
+    }
+  }
+  underlineColorAndroid="transparent"
+  value=""
+/>
+`;
