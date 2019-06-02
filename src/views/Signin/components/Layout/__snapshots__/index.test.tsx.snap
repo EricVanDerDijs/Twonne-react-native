@@ -7,10 +7,6 @@ exports[`Renders SigninLayout correctly 1`] = `
       "alignItems": "center",
       "backgroundColor": "#1A659E",
       "flex": 1,
-      "paddingBottom": 9,
-      "paddingLeft": 9,
-      "paddingRight": 9,
-      "paddingTop": 9,
     }
   }
 >
@@ -43,18 +39,91 @@ exports[`Renders SigninLayout correctly 1`] = `
   <View
     style={
       Object {
-        "backgroundColor": "white",
-        "borderRadius": 5,
         "flex": 6,
-        "justifyContent": "space-between",
-        "padding": 10,
+        "padding": 15,
         "width": "100%",
       }
     }
   >
-    <Text>
-      eric
-    </Text>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 2,
+          "borderColor": "#FF5454",
+          "borderLeftWidth": 0,
+          "borderRadius": 10,
+          "borderRightWidth": 0,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontSize": 16,
+          }
+        }
+      >
+        username
+      </Text>
+      <TextInput
+        allowFontScaling={true}
+        onChangeText={[Function]}
+        rejectResponderTermination={true}
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderRadius": 6,
+            "color": "#181528",
+            "fontSize": 20,
+          }
+        }
+        textContentType="username"
+        underlineColorAndroid="transparent"
+        value="eric"
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 2,
+          "borderColor": "#FF5454",
+          "borderLeftWidth": 0,
+          "borderRadius": 10,
+          "borderRightWidth": 0,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontSize": 16,
+          }
+        }
+      >
+        password
+      </Text>
+      <TextInput
+        allowFontScaling={true}
+        onChangeText={[Function]}
+        rejectResponderTermination={true}
+        secureTextEntry={true}
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderRadius": 6,
+            "color": "#181528",
+            "fontSize": 20,
+          }
+        }
+        textContentType="password"
+        underlineColorAndroid="transparent"
+        value="eric"
+      />
+    </View>
     <View
       accessible={true}
       isTVSelectable={true}

@@ -28,10 +28,21 @@ export const SigninLayout = ({
       </View>
       <View style={styles.formContainer}>
         <TextInput
+          textContentType='username'
           label='username'
           value={username}
           labelColor={white}
+          style={styles.inputContainer}
           onChangeText={mockHandler}
+        />
+        <TextInput
+          textContentType='password'
+          label='password'
+          value={username}
+          labelColor={white}
+          style={styles.inputContainer}
+          onChangeText={mockHandler}
+          secureTextEntry={true}
         />
         <Button
           text='Signin'

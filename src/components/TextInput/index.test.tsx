@@ -11,13 +11,13 @@ const mockHandler = (text: string): void  => {
 };
 
 it('Renders our custom TesxtInput', () => {
-  shallow.render(
+  shallow.render((
     <TextInput
       label='user'
       value=''
       onChangeText={mockHandler}
     />
-  );
+  ));
 });
 
 it('Updates TextInput value correctly', () => {
