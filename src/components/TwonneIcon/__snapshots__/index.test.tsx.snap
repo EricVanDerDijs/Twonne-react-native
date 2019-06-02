@@ -23,9 +23,15 @@ exports[`Renders Twonne Logo 1`] = `
     <Text
       style={
         Object {
-          "color": "#F37721",
+          "color": "white",
           "fontFamily": "ExpletusSans-BoldItalic",
           "fontSize": 14,
+          "textShadowColor": "#FF9E54",
+          "textShadowOffset": Object {
+            "height": 2.3,
+            "width": -2.3,
+          },
+          "textShadowRadius": 1,
         }
       }
     >

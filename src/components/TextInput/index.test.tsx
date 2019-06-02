@@ -5,7 +5,6 @@ import renderer from 'react-test-renderer';
 let textValue = '';
 
 const mockHandler = (text: string): void  => {
-  // tslint:disable-next-line
   textValue = text;
 };
 
@@ -19,7 +18,7 @@ it('Renders our custom TesxtInput', () => {
   expect(tree).toMatchSnapshot();
 });
 
-it('Updates TesxtInput value correctly', () => {
+it('Updates TextInput value correctly', () => {
   const tree = renderer.create((
     <TextInput
       value=''
@@ -27,7 +26,7 @@ it('Updates TesxtInput value correctly', () => {
     />
   ));
 
-  const textInputInstance = tree.getInstance();
+  const textInputInstance = tree.root;
 
   if (textInputInstance
   && textInputInstance.props

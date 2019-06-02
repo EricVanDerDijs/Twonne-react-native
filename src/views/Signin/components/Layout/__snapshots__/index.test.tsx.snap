@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders SigninLayout correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#1A659E",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 6,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontFamily": "ExpletusSans-BoldItalic",
+          "fontSize": 40,
+          "textShadowColor": "#FF9E54",
+          "textShadowOffset": Object {
+            "height": 2.3,
+            "width": -2.3,
+          },
+          "textShadowRadius": 1,
+        }
+      }
+    >
+      Twonne
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 4,
+      }
+    }
+  >
+    <Text>
+      eric
+    </Text>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#FF9E54",
+          "borderRadius": 10,
+          "height": 50,
+        }
+      }
+    >
+      <View
+        style={null}
+      >
+        <Text
+          style={
+            Object {
+              "color": "white",
+            }
+          }
+        >
+          Signin
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;

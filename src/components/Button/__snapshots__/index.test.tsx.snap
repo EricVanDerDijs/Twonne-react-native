@@ -12,7 +12,7 @@ exports[`Renders NativeButton with our custom styles 1`] = `
   onStartShouldSetResponder={[Function]}
   style={
     Object {
-      "backgroundColor": "#F37721",
+      "backgroundColor": "#FF9E54",
       "borderRadius": 10,
       "height": 50,
     }

@@ -1,10 +1,10 @@
 import { StyleSheet } from 'react-native';
-import { white } from '../../../assets/colors';
+import { blueTwonne } from '../../../../assets/colors';
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: white,
+    backgroundColor: blueTwonne,
     alignItems: 'center',
   },
   twonneIconContainer: {

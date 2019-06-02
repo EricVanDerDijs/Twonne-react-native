@@ -1,8 +1,8 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 import { NativeSyntheticEvent, NativeTouchEvent } from 'react-native';
-import { TwonneIcon } from '../../../components/TwonneIcon';
-import { Button } from '../../../components/Button';
+import { TwonneIcon } from '../../../../components/TwonneIcon';
+import { Button } from '../../../../components/Button';
 import { styles } from './styles';
 
 interface IProps {

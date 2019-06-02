@@ -1,3 +1,3 @@
-export const yellowTwonne = '#F37721';
+export const pinkTwonne = '#FF9E54';
 export const white = 'white';
-export const shadowGray = '#F2F1F1';
+export const blueTwonne = '#1A659E';

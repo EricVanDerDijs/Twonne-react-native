@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { SigninLayout } from './components/SigninLayout';
+import { SigninLayout } from './components/Layout';
 
 class Signin extends Component {
   public static navigationOptions = {
