@@ -9,8 +9,12 @@ export const styles = (
     borderRadius: 10,
     backgroundColor: color,
     height: 50,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   text: {
+    fontSize: 20,
+    fontWeight: 'bold',
     color: textColor,
   },
 });
