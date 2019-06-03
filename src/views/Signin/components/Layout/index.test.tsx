@@ -1,18 +1,24 @@
 import React from 'react';
 import { SigninLayout } from './index';
-import renderer from 'react-test-renderer';
+import ShallowRenderer from 'react-test-renderer/shallow';
+
+const shallow = ShallowRenderer.createRenderer();
 
 function mockHandler(): void {
   // tslint:disable-next-line
   console.debug('test text')
 }
 
-it('Renders SigninLayout correctly', () => {
-  const tree = renderer.create((
+const initialValues = {
+  username: 'eric',
+  password: '1234',
+}
+
+it('Renders SigninLayout without crashing', () => {
+  shallow.render((
     <SigninLayout
-      username='eric'
+      initialValues={initialValues}
       handleSignin={mockHandler}
     />
-  )).toJSON();
-  expect(tree).toMatchSnapshot();
+  ));
 });

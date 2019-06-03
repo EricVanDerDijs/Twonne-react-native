@@ -1,5 +1,6 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Formik } from 'formik';
+import { View } from 'react-native';
 import { NativeSyntheticEvent, NativeTouchEvent } from 'react-native';
 import { TwonneIcon } from '../../../../components/TwonneIcon';
 import { Button } from '../../../../components/Button';
@@ -13,12 +14,15 @@ const mockHandler = (text: string): void => {
 };
 
 interface IProps {
-  username: string;
-  handleSignin(e: NativeSyntheticEvent<NativeTouchEvent>): void;
+  initialValues: {
+    username: string;
+    password: string;
+  };
+  handleSignin(): void;
 }
 
 export const SigninLayout = ({
-  username,
+  initialValues,
   handleSignin,
 }: IProps): React.ReactElement => {
   return (
@@ -26,29 +30,40 @@ export const SigninLayout = ({
       <View style={styles.twonneIconContainer}>
         <TwonneIcon fontSize={40} />
       </View>
-      <View style={styles.formContainer}>
-        <TextInput
-          textContentType='username'
-          label='username'
-          value={username}
-          labelColor={white}
-          style={styles.inputContainer}
-          onChangeText={mockHandler}
-        />
-        <TextInput
-          textContentType='password'
-          label='password'
-          value={username}
-          labelColor={white}
-          style={styles.inputContainer}
-          onChangeText={mockHandler}
-          secureTextEntry={true}
-        />
-        <Button
-          text='Signin'
-          onPress={handleSignin}
-        />
-      </View>
+      <Formik
+        initialValues={initialValues}
+        onSubmit={handleSignin}
+      >
+      {({
+        values,
+        handleChange,
+        handleSubmit,
+      }) => (
+        <View style={styles.formContainer}>
+          <TextInput
+            textContentType='username'
+            label='username'
+            value={values.username}
+            labelColor={white}
+            style={styles.inputContainer}
+            onChangeText={handleChange('username')}
+          />
+          <TextInput
+            textContentType='password'
+            label='password'
+            value={values.password}
+            labelColor={white}
+            style={styles.inputContainer}
+            onChangeText={handleChange('password')}
+            secureTextEntry={true}
+          />
+          <Button
+            text='Signin'
+            onPress={handleSubmit}
+          />
+        </View>
+      )}
+      </Formik>
     </View>
   );
 };

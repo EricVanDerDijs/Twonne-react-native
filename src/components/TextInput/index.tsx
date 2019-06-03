@@ -1,12 +1,13 @@
 import React from 'react';
 import { ReactElement } from 'react';
-import { TextInput as Input, View, Text, StyleSheet } from 'react-native';
+import { TextInput as Input, View, Text, StyleSheet, ViewStyle } from 'react-native';
 import { TextInputProps } from 'react-native';
 import { styles } from './styles';
 
 interface IProps extends TextInputProps {
   label: string;
   labelColor?: string;
+  containerStyles?: ViewStyle;
 }
 
 const TextInput = ({
@@ -14,13 +15,13 @@ const TextInput = ({
   value,
   labelColor,
   onChangeText,
-  style,
-  ...props
+  containerStyles,
 }: IProps): ReactElement => {
   const s = styles(labelColor);
-  const containerStyles = StyleSheet.flatten([s.InputContainer, style]);
+  const inputContainerStyles = StyleSheet.flatten([s.InputContainer, containerStyles]);
+
   return (
-    <View style={containerStyles}>
+    <View style={inputContainerStyles}>
       <Text style={s.inputLabel}>
         {label}
       </Text>
@@ -28,7 +29,6 @@ const TextInput = ({
         value={value}
         onChangeText={onChangeText}
         style={s.input}
-        {...props}
       />
     </View>
   );
