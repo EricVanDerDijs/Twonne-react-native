@@ -13,16 +13,16 @@ const mockHandler = (text: string): void => {
   console.debug(text);
 };
 
+const initialValues = {
+  username: '',
+  password: '',
+};
+
 interface IProps {
-  initialValues: {
-    username: string;
-    password: string;
-  };
   handleSignin(): void;
 }
 
 export const SigninLayout = ({
-  initialValues,
   handleSignin,
 }: IProps): React.ReactElement => {
   return (
@@ -45,7 +45,7 @@ export const SigninLayout = ({
             label='username'
             value={values.username}
             labelColor={white}
-            style={styles.inputContainer}
+            marginBottom={10}
             onChangeText={handleChange('username')}
           />
           <TextInput
@@ -53,7 +53,7 @@ export const SigninLayout = ({
             label='password'
             value={values.password}
             labelColor={white}
-            style={styles.inputContainer}
+            marginBottom={25}
             onChangeText={handleChange('password')}
             secureTextEntry={true}
           />

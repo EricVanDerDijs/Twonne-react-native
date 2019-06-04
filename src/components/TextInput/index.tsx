@@ -1,27 +1,26 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { ReactElement } from 'react';
-import { TextInput as Input, View, Text, StyleSheet, ViewStyle } from 'react-native';
+import { TextInput as Input, View, Text } from 'react-native';
 import { TextInputProps } from 'react-native';
 import { styles } from './styles';
 
 interface IProps extends TextInputProps {
   label: string;
   labelColor?: string;
-  containerStyles?: ViewStyle;
+  marginBottom?: number;
 }
 
-const TextInput = ({
+const TextInput = memo(({
   label,
   value,
   labelColor,
+  marginBottom,
   onChangeText,
-  containerStyles,
 }: IProps): ReactElement => {
-  const s = styles(labelColor);
-  const inputContainerStyles = StyleSheet.flatten([s.InputContainer, containerStyles]);
+  const s = styles(labelColor, marginBottom);
 
   return (
-    <View style={inputContainerStyles}>
+    <View style={s.InputContainer}>
       <Text style={s.inputLabel}>
         {label}
       </Text>
@@ -32,6 +31,6 @@ const TextInput = ({
       />
     </View>
   );
-};
+});
 
 export { TextInput };

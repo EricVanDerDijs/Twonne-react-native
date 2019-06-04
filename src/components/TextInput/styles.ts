@@ -3,6 +3,7 @@ import { white, textualGray, pinkTwonne } from '../../assets/colors';
 
 export const styles = (
   labelColor: string = textualGray,
+  marginBottom: number = 0,
 ) => StyleSheet.create({
   InputContainer: {
     width: '100%',
@@ -10,7 +11,8 @@ export const styles = (
     borderLeftWidth: 0,
     borderRightWidth: 0,
     borderColor: pinkTwonne,
-    borderRadius: 10,
+    borderRadius: 4,
+    marginBottom,
   },
   inputLabel: {
     fontSize: 16,

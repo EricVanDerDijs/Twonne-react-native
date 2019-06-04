@@ -6,11 +6,6 @@ class Signin extends Component {
     header: null,
   };
 
-  private initialFormValues = {
-    username: '',
-    password: '',
-  };
-
   private handleSignin = () => {
     // tslint:disable-next-line
     console.log('sign in!');
@@ -19,7 +14,6 @@ class Signin extends Component {
   public render() {
     return (
       <SigninLayout
-        initialValues={this.initialFormValues}
         handleSignin={this.handleSignin}
       />
     );

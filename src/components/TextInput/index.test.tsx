@@ -1,9 +1,7 @@
 import React from 'react';
 import { TextInput } from './index';
-import ShallowRenderer from 'react-test-renderer/shallow';
-import renderer from 'react-test-renderer';
+import { create } from 'react-test-renderer';
 
-const shallow = ShallowRenderer.createRenderer();
 let textValue = '';
 
 const mockHandler = (text: string): void  => {
@@ -11,7 +9,7 @@ const mockHandler = (text: string): void  => {
 };
 
 it('Renders our custom TesxtInput', () => {
-  shallow.render((
+  create((
     <TextInput
       label='user'
       value=''
@@ -21,7 +19,7 @@ it('Renders our custom TesxtInput', () => {
 });
 
 it('Updates TextInput value correctly', () => {
-  const tree = renderer.create((
+  const tree = create((
     <TextInput
       label='user'
       value=''

@@ -6,7 +6,7 @@ export const styles = (
   textColor: string = white,
 ) => StyleSheet.create({
   container: {
-    borderRadius: 10,
+    borderRadius: 4,
     backgroundColor: color,
     height: 50,
     alignItems: 'center',
