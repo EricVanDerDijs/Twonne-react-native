@@ -3,7 +3,7 @@ import { ReactElement } from 'react';
 import { TouchableHighlight, View, Text } from 'react-native';
 import { NativeSyntheticEvent, NativeTouchEvent } from 'react-native';
 import { styles } from './styles';
-import { shadowGray } from '../../assets/colors';
+import { white } from 'src/assets/colors';
 
 interface IProps {
   fontSize: number;
@@ -20,7 +20,7 @@ const TwonneIcon = ({
       <TouchableHighlight
         onPress={onPress}
         style={style.container}
-        underlayColor={shadowGray}
+        underlayColor={white}
       >
         <View>
           <Text

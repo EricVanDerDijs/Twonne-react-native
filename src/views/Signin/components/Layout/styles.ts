@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { blueTwonne } from '../../../../assets/colors';
+import { blueTwonne } from 'src/assets/colors';
 
 export const styles = StyleSheet.create({
   container: {

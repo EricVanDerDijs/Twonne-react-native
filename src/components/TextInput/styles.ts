@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { white, textualGray, pinkTwonne } from '../../assets/colors';
+import { white, textualGray, pinkTwonne } from 'src/assets/colors';
 
 export const styles = (
   labelColor: string = textualGray,

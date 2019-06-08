@@ -2,7 +2,7 @@ import React from 'react';
 import { ReactElement } from 'react';
 import { TouchableHighlight, View, Text } from 'react-native';
 import { NativeSyntheticEvent, NativeTouchEvent } from 'react-native';
-import { pinkTwonneLight } from '../../assets/colors';
+import { pinkTwonneLight } from 'src/assets/colors';
 import { styles } from './styles';
 
 interface IProps {

@@ -1,17 +1,16 @@
 import React from 'react';
 import { Formik } from 'formik';
 import { View } from 'react-native';
-import { NativeSyntheticEvent, NativeTouchEvent } from 'react-native';
-import { TwonneIcon } from '../../../../components/TwonneIcon';
-import { Button } from '../../../../components/Button';
-import { TextInput } from '../../../../components/TextInput';
-import { white } from '../../../../assets/colors';
+import { white } from 'src/assets/colors';
+import { Button } from 'src/components/Button';
+import { TextInput } from 'src/components/TextInput';
+import { TwonneIcon } from 'src/components/TwonneIcon';
 import { styles } from './styles';
 
-const mockHandler = (text: string): void => {
-  // tslint:disable-next-line
-  console.debug(text);
-};
+// const mockHandler = (text: string): void => {
+//   // tslint:disable-next-line
+//   console.debug(text);
+// };
 
 const initialValues = {
   username: '',

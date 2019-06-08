@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { white, pinkTwonne } from '../../assets/colors';
+import { white, pinkTwonne } from 'src/assets/colors';
 
 export const styles = (
   fontSize: number,
