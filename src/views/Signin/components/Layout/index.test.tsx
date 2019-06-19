@@ -17,7 +17,6 @@ const initialValues = {
 it('Renders SigninLayout without crashing', () => {
   shallow.render((
     <SigninLayout
-      initialValues={initialValues}
       handleSignin={mockHandler}
     />
   ));

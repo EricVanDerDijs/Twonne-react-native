@@ -1,4 +1,4 @@
-export interface SessionState {
+export interface ISessionState {
   email: string;
   role: string;
   token: string;

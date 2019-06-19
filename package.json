@@ -7,6 +7,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@types/redux-mock-store": "^1.0.1",
     "axios": "^0.19.0",
     "formik": "^1.5.7",
     "react": "16.8.3",
@@ -30,6 +31,7 @@
     "jest": "24.8.0",
     "metro-react-native-babel-preset": "0.54.1",
     "react-test-renderer": "16.8.3",
+    "redux-mock-store": "^1.5.3",
     "ts-jest": "^24.0.2",
     "tslint": "^5.16.0",
     "tslint-eslint-rules": "^5.4.0",

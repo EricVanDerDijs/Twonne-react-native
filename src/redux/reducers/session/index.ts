@@ -1,5 +1,5 @@
 import { SessionActionTypes } from '../../actions/session/types';
-import { SessionState } from './types';
+import { ISessionState } from './types';
 import {
   SESSION_TOKEN_ADD,
   SESSION_TOKEN_REMOVE,
@@ -8,14 +8,14 @@ import {
   SESSION_USER_EMAIL_SET,
 } from '../../actions/session';
 
-const initialState: SessionState = {
+const initialState: ISessionState = {
   email: '',
   role: '',
   token: '',
   username: '',
 };
 
-export const sessionReducer = (state = initialState, action: SessionActionTypes): SessionState => {
+export const sessionReducer = (state = initialState, action: SessionActionTypes): ISessionState => {
   switch (action.type) {
     case SESSION_TOKEN_ADD:
       const { token } = action.payload;

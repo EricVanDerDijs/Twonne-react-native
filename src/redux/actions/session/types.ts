@@ -1,3 +1,6 @@
+import { ISessionState } from 'src/redux/reducers/session/types';
+import { ThunkAction, ThunkDispatch } from 'redux-thunk';
+
 import {
   SESSION_TOKEN_ADD,
   SESSION_TOKEN_REMOVE,
@@ -49,5 +52,12 @@ interface ISetUserEmailAction {
   payload: { email: string };
 }
 
-export type SessionActionTypes = IAddTokenAction | IRemoveTokenAction
-  | IUpdateSessionData | IAddUserData | ISetUserEmailAction;
+export type SessionActionTypes = IAddTokenAction
+  | IRemoveTokenAction
+  | IUpdateSessionData
+  | IAddUserData
+  | ISetUserEmailAction;
+
+export type ThunkResult<R> = ThunkAction<R, ISessionState, undefined, SessionActionTypes>;
+
+export type SessionDispatch = ThunkDispatch<ISessionState, undefined, SessionActionTypes>;
